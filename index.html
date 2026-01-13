@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faryal Faizan GIS Portfolio</title>
+
+  <style>
+    :root{
+      --blue:#2563eb;
+      --blue2:#1d4ed8;
+      --text:#1f2937;
+      --bg1:#cfe7f5;
+      --bg2:#eaf6fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --shadow: 0px 4px 15px rgba(0,0,0,0.10);
+      --radius: 12px;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, var(--bg1), var(--bg2));
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--blue);
+      color: white;
+      padding: 22px 12px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; }
+
+    .about {
+      padding: 30px;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+
+    .section {
+      padding: 26px 20px;
+      text-align: center;
+    }
+
+    h1, h2 { color: var(--text); }
+
+    /* Quick links (top 4 icons only) */
+    .quick-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .quick-links a{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: white;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      border: 1px solid rgba(31,41,55,0.15);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .quick-links a:hover{
+      transform: translateY(-2px);
+      background: #ffffff;
+    }
+
+    /* Projects grid */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    /* NEW generic card style (no "project-card" repeated everywhere) */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      width: 300px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 10px 22px rgba(0,0,0,0.14);
+    }
+
+    .badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(37,99,235,0.10);
+      color: var(--blue2);
+      border: 1px solid rgba(37,99,235,0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 17px;
+      padding-right: 70px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .card p {
+      margin: 0 0 14px 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.35rem;
+      min-height: 2.6rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      background-color: var(--blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background-color: var(--blue2); }
+
+    .btn.secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid rgba(31,41,55,0.15);
+    }
+
+    .btn.secondary:hover {
+      background: #f9fafb;
+    }
+
+    footer {
+      background-color: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 560px) {
+      .card { width: 92%; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Faryal Faizan GIS Portfolio</h1>
+  </header>
+
+  <section class="about" id="top">
+    <h2>About Me</h2>
+    <p>
+      I am a detail-oriented GIS professional with hands-on experience in geospatial technologies, remote sensing, web mapping, and spatial analysis.<br/>
+      Currently pursuing a Master's in Geography & Environmental Studies at Northeastern Illinois University, I am passionate about supporting environmental projects, urban planning, and spatial storytelling through dynamic mapping solutions.<br/>
+      Fluent in English and Urdu, and skilled in ArcGIS Pro, QGIS, Python scripting, and web GIS development.
+    </p>
+
+    <!-- Top 4 icons (kept) -->
+    <div class="quick-links">
+      <a href="#webgis">🌐 Web GIS</a>
+      <a href="#storymaps">📖 StoryMaps</a>
+      <a href="#dashboards">📊 Dashboards</a>
+    </div>
+  </section>
+
+  <!-- Web GIS -->
+  <section class="section" id="webgis">
+    <h2>Web GIS Projects</h2>
+    <div class="projects">
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🔥 Chicago Crime Heat Map</h3>
+        <p>Interactive heat map visualization for exploring crime hotspots and spatial patterns.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/heat-map/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/heat-map/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🟣 Proportional Symbol Population Map</h3>
+        <p>Proportional symbol mapping to communicate population distribution clearly.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/proportional-symbol/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/proportional-symbol/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🗺️ USA State Map</h3>
+        <p>Interactive state-level map for basic exploration and map interaction.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/USAMap/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/USAMap/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🔍 Magnifying Glass Feature Map</h3>
+        <p>Magnifier interaction to zoom in and explore features more smoothly.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/MagnifyingGlass/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/MagnifyingGlass/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>📘 Crime Density Heat Map Tutorial</h3>
+        <p>Step-by-step tutorial explaining how the heat map was built and published.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Heat-Map-Tutorial/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Heat-Map-Tutorial/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🎓 Campus Navigation Map</h3>
+        <p>Navigation-style map with points of interest and interactive exploration.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Campus-Map/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Campus-Map/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🧩 Interactive Layer Control Map</h3>
+        <p>Layer toggle controls for comparing datasets and map layers.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Layer-control-Map/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Layer-control-Map/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>➡️ Outflow Commuter Map</h3>
+        <p>Visualizes commuter outflows to understand movement patterns.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Outflowmap/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Outflowmap/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>⬅️ Inflow Commuter Map</h3>
+        <p>Visualizes commuter inflows to understand where people are coming from.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Inflowmap/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Inflowmap/">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Web GIS</div>
+        <h3>🧭 Simple Interactive Map</h3>
+        <p>A simple interactive map focusing on core map controls and usability.</p>
+        <div class="actions">
+          <a class="btn" href="https://ffaizan1.github.io/Map/" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://ffaizan1.github.io/Map/">Copy link</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- StoryMaps -->
+  <section class="section" id="storymaps">
+    <h2>ArcGIS Online StoryMaps</h2>
+    <div class="projects">
+
+      <div class="card">
+        <div class="badge">StoryMap</div>
+        <h3>🧪 Layer Blending Technique In QGIS</h3>
+        <p>StoryMap explaining the workflow and outputs of layer blending in QGIS.</p>
+        <div class="actions">
+          <a class="btn" href="https://storymaps.arcgis.com/stories/ef45aac7325e496da7e4cb9633e47ce0" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://storymaps.arcgis.com/stories/ef45aac7325e496da7e4cb9633e47ce0">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">StoryMap</div>
+        <h3>♿ Train Station Accessibility and Gaps</h3>
+        <p>Crowdsourced accessibility findings with maps, charts, and recommendations.</p>
+        <div class="actions">
+          <a class="btn" href="https://storymaps.arcgis.com/stories/b6a140468f7d4df89d7821b03de97e4e" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://storymaps.arcgis.com/stories/b6a140468f7d4df89d7821b03de97e4e">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">StoryMap</div>
+        <h3>🌡️ Urban Heat Island Analysis in Chicago</h3>
+        <p>Explores temperature patterns and land cover impacts across Chicago.</p>
+        <div class="actions">
+          <a class="btn" href="https://storymaps.arcgis.com/stories/422975df832a4f89aeb162721f088e0c" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://storymaps.arcgis.com/stories/422975df832a4f89aeb162721f088e0c">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">StoryMap</div>
+        <h3>🌳 Chicago Park Districts</h3>
+        <p>Interactive StoryMap exploring park districts and spatial distribution.</p>
+        <div class="actions">
+          <a class="btn" href="https://storymaps.arcgis.com/stories/5d65f30c00b443d2b90d3d6752c5dc5b" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://storymaps.arcgis.com/stories/5d65f30c00b443d2b90d3d6752c5dc5b">Copy link</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">StoryMap</div>
+        <h3>👥 Population and Diversity</h3>
+        <p>Story-driven exploration of population patterns and diversity themes.</p>
+        <div class="actions">
+          <a class="btn" href="https://storymaps.arcgis.com/stories/19d6d6fb8792427bba3dedfda014853d" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://storymaps.arcgis.com/stories/19d6d6fb8792427bba3dedfda014853d">Copy link</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section class="section" id="dashboards">
+    <h2>ArcGIS Online Dashboards</h2>
+    <div class="projects">
+
+      <div class="card">
+        <div class="badge">Dashboard</div>
+        <h3>📊 ArcGIS Online Dashboard</h3>
+        <p>Interactive dashboard for monitoring key indicators and map-driven insights.</p>
+        <div class="actions">
+          <a class="btn" href="https://neiu2.maps.arcgis.com/apps/dashboards/0b97ba88a46e4ae68d60c479c4ccd09a" target="_blank" rel="noopener">Open</a>
+          <button class="btn secondary" data-copy="https://neiu2.maps.arcgis.com/apps/dashboards/0b97ba88a46e4ae68d60c479c4ccd09a">Copy link</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>📫 Contact: Faryalsheikh677@gmail.com</p>
+  </footer>
+
+  <script>
+    // Copy link buttons
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest("button[data-copy]");
+      if (!btn) return;
+
+      const link = btn.getAttribute("data-copy");
+      try {
+        await navigator.clipboard.writeText(link);
+        const old = btn.textContent;
+        btn.textContent = "Copied! ✅";
+        setTimeout(() => btn.textContent = old, 900);
+      } catch (err) {
+        alert("Copy failed. You can manually copy this link:\n" + link);
+      }
+    });
+  </script>
+</body>
+</html>
