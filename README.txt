@@ -1,0 +1,1 @@
+FINAL V5: separate 1200x700 PNG visual for every project; no crops from a full-page image; resume removed; upload index.html + assets folder together.
